@@ -1,12 +1,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var array = ["Mow the Lawn","Feed the Dog","Grocery Shop"]
+    @State var tasks: [Task] 
+    
     var body: some View {
         VStack {
-        
-            ForEach(array, id: \.self) { item in
-                Text(item)
+            ForEach(tasks, id: \.self) { task in
+                Text(task.nameOfTask)
             }
             
         }
